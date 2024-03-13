@@ -174,7 +174,7 @@
                                                 id="nghiencuukhoahoc">
 <!-- ---------------------------------------------------Danh sách Sách-------------------------------------------------------------- -->
                                                 <script language="javascript">
-                                                    async function buildDanhsachDetai(jsonData1, jsonData2) {
+                                                    async function buildDanhsachSach(jsonData1, jsonData2) {
                                                         var danhSachSach = {}; // Để lưu trữ sách
                                                         var danhSachTaiLieu = {}; // Để lưu trữ tài liệu
 
@@ -226,16 +226,16 @@
 
                                                         // Danh sách Tài liệu
 
-                                                        document.getElementById("nghiencuukhoahoc").innerHTML = danhSachHTML;
+                                                        document.getElementById("danhsachSach").innerHTML = danhSachHTML;
                                                     }
 
-                                                    const getJsonDanhsachNghiencuukhoahoc = async () => {
+                                                    const getJsonDanhsachSach = async () => {
                                                         let jsonData1 = await fetchURL("https://nhanban.keri.vn/api/list/?tablename=tbl_com_01_nhanban_01_chuyennganhcap1");
                                                         let jsonData2 = await fetchURL("https://nhanban.keri.vn/api/list/?tablename=tbl_com_01_nhanban_02_chuyennganhcap2");
-                                                        buildDanhsachDetai(jsonData1, jsonData2);
+                                                        buildDanhsachSach(jsonData1, jsonData2);
                                                     }
 
-                                                    getJsonDanhsachNghiencuukhoahoc();
+                                                    getJsonDanhsachSach();
 
                                                 </script>
 <!-- ---------------------------------------------------Danh sách Sách-------------------------------------------------------------- -->
